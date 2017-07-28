@@ -5,6 +5,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 
 
 ### Project Structure
+
 ![](extra/projectstructure.JPG)
 
 
@@ -17,17 +18,22 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 5. Tomcat 6 / Tomcat 7 / Tomcat 8 / Tomcat 9
 
 #### Step 2 - Create Project
+
 > Click on File > New > Dynamic Web Project
+
 ![](extra/step2.1.JPG)
 ![](extra/step2.2.JPG)
 ![](extra/step2.3.JPG)
 
 #### Step 3 - Convert as Maven Project
+
 > Click Right click on Project > Configure > Convert to Maven project
+
 ![](extra/step3.1.JPG)
 ![](extra/step3.2.JPG)
 
 #### Step 3 - Add Dipendency in ``pom.xml`` file
+
 ```XML
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -90,6 +96,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 
 
 #### Step 4 - Add Spring Servlet in ``WebContent\WEB-INF\web.xml`` file
+
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -117,6 +124,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 
 
 #### Step 5 - Add Spring Configration in ``WebContent\WEB-INF\spring-web-servlet.xml`` file
+
 ```XML
 <!-- Start Here -->
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -155,7 +163,9 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ```
 
 #### Step 6 - Add View to project ``WebContent\WEB-INF\jsp\hello.jsp`` file
+
 ![](extra/output.JPG)
+
 ```JSP
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -175,9 +185,12 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 </html>
 ```
 
-#### Step 7 - Add java controller class file in ``src\com\rutvikpatel\springmvc3\helloworld\controller\HomeController.java`` folder
+#### Step 7 - Add Controller Class in ``src\com\rutvikpatel\springmvc3\helloworld\controller\HomeController.java`` folder
+
 > Right Click on ``src`` folder > New > Class
+
 ![](extra/step7.1.JPG)
+
 ```JAVA
 package com.rutvikpatel.springmvc3.helloworld.controller;
 
@@ -205,3 +218,7 @@ public class HomeController {
 	}
 }
 ```
+
+#That's it... you are ready to run
+
+> Right Click on Project > Run As > Run on Server > Select Tomcat Server and click ``finish``
