@@ -228,10 +228,9 @@ public class HomeController {
 
 > Right Click on Project > Run As > Run on Server > Select Tomcat Server and click ``finish``
 
-
 ## Note
 
-> In ``spring-web-servlet.xml`` file prefix ``XXX-servlet.xml`` should be same as "<servlet-name>" described in ``web.xml`` file
+> In ``spring-web-servlet.xml`` file prefix ``XXX-servlet.xml`` should be same as servlet-name described in ``web.xml`` file
 
 ```XML
 <servlet>
@@ -244,4 +243,3 @@ public class HomeController {
 	<url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
-spring-web
