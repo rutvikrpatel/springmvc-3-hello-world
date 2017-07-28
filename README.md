@@ -8,10 +8,6 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ![](extra/projectstructure.JPG)
 
 
-### Output
-![](extra/output.JPG)
-
-
 #### Step 1 - Let’s Setup Environment
 
 1. Spring 3.2.13.RELEASE and any latest version
@@ -157,3 +153,24 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 </beans>
 <!-- End Here -->
 ```
+
+#### Step 6 - Add View to project ``WebContent\WEB-INF\jsp\hello.jsp`` file
+```JSP
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>${title}</title>
+</head>
+<body>
+	<h1>${title}</h1>
+	
+	<c:if test="${not empty name}">
+		Hello ${name}
+	</c:if>
+</body>
+</html>
+```
+![](extra/output.JPG)
