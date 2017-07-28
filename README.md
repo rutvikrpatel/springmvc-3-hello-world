@@ -243,3 +243,10 @@ public class HomeController {
 	<url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
+
+
+## Meta
+
+Rutvik Patel - rrpatel003@gmail.com
+
+Distributed under the GPL V3.0 license. See ``LICENSE`` for more information.
