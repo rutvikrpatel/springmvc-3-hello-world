@@ -1,4 +1,7 @@
-In this tutorial, we show you how to create Spring 3.0 MVC hello world example in simplest way.
+# springmvc-3-hello-world
+Day 4 - Spring MVC 3.0 - Hello World Example
+
+> In this tutorial, we show you how to create Spring 3.0 MVC hello world example in simplest way.
 
 
 ### Project Structure
@@ -132,7 +135,7 @@ In this tutorial, we show you how to create Spring 3.0 MVC hello world example i
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
     
-    <!-- component scan location configuration -->
+	<!-- component scan location configuration -->
 	<context:component-scan base-package="com.rutvikpatel.springmvc3.helloworld" />
 	
 	<!-- jsp page binding configuration -->
