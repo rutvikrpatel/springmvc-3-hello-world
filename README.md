@@ -5,7 +5,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 
 
 ### Project Structure
-![](extra/project structure.JPG)
+![](extra/projectstructure.JPG)
 
 
 ### Output
