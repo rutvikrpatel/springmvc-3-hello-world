@@ -1,7 +1,4 @@
-# springmvc-3-hello-world
-Day 4 - Spring MVC 3.0 - Hello World Example
-
-> In this tutorial, we show you how to create Spring 3.0 MVC hello world example in simplest way.
+In this tutorial, we show you how to create Spring 3.0 MVC hello world example in simplest way.
 
 
 ### Project Structure
@@ -31,7 +28,8 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ![](extra/step3.1.JPG)
 ![](extra/step3.2.JPG)
 
-```
+put these code in ``pom.xml`` file
+```XML
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -41,12 +39,11 @@ Day 4 - Spring MVC 3.0 - Hello World Example
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
-	<properties>
+	`<properties>
 		<jdk.version>1.6</jdk.version>
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -64,7 +61,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 		    <version>3.0.1</version>
 		    <scope>provided</scope>
 		</dependency>
-	</dependencies>
+	</dependencies>`
   
   <build>
     <sourceDirectory>src</sourceDirectory>
