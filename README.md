@@ -28,7 +28,7 @@ In this tutorial, we show you how to create Spring 3.0 MVC hello world example i
 ![](extra/step3.1.JPG)
 ![](extra/step3.2.JPG)
 
-put these code in ``pom.xml`` file
+#### Step 3 - Add Dipendency in ``POM.XML`` file
 ```XML
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -39,7 +39,8 @@ put these code in ``pom.xml`` file
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
-	`<properties>
+  <!-- Starts Here -->
+	<properties>
 		<jdk.version>1.6</jdk.version>
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
@@ -61,7 +62,8 @@ put these code in ``pom.xml`` file
 		    <version>3.0.1</version>
 		    <scope>provided</scope>
 		</dependency>
-	</dependencies>`
+	</dependencies>
+  <!-- End Here -->
   
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -87,3 +89,29 @@ put these code in ``pom.xml`` file
 </project>
 ```
 
+
+#### Step 4 - Add Spring  ``WEB.XML`` file
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	id="WebApp_ID" version="2.5">
+	
+	<display-name>com.rutvikpatel.springmvc3.helloworld</display-name>
+	
+	<!-- Starts Here -->
+	<servlet>
+		<servlet-name>spring-web</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>spring-web</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<!-- End Here -->
+	
+</web-app>
+```
