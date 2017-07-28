@@ -224,11 +224,11 @@ public class HomeController {
 ```
 
 
-#That's it... you are ready to run
+# That's it... you are ready to run
 
 > Right Click on Project > Run As > Run on Server > Select Tomcat Server and click ``finish``
 
-## Note
+### Note
 
 > In ``spring-web-servlet.xml`` file prefix ``XXX-servlet.xml`` should be same as servlet-name described in ``web.xml`` file
 
