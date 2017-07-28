@@ -1,7 +1,7 @@
 # springmvc-3-hello-world
 Day 4 - Spring MVC 3.0 - Hello World Example
 
-> In this tutorial, we show you how to create Spring 3.0 MVC hello world example in simplest way.
+> In this tutorial you will know how to create Spring 3.0 MVC hello world example in simplest way.
 
 
 ### Project Structure
@@ -25,6 +25,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ![](extra/step2.2.JPG)
 ![](extra/step2.3.JPG)
 
+
 #### Step 3 - Convert as Maven Project
 
 > Click Right click on Project > Configure > Convert to Maven project
@@ -32,7 +33,8 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ![](extra/step3.1.JPG)
 ![](extra/step3.2.JPG)
 
-#### Step 3 - Add Dipendency in ``pom.xml`` file
+
+#### Step 4 - Add Dipendency in ``pom.xml`` file
 
 ```XML
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
@@ -95,7 +97,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ```
 
 
-#### Step 4 - Add Spring Servlet in ``WebContent\WEB-INF\web.xml`` file
+#### Step 5 - Add Spring Servlet in ``WebContent\WEB-INF\web.xml`` file
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -123,7 +125,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ```
 
 
-#### Step 5 - Add Spring Configration in ``WebContent\WEB-INF\spring-web-servlet.xml`` file
+#### Step 6 - Add Spring Configration in ``WebContent\WEB-INF\spring-web-servlet.xml`` file
 
 ```XML
 <!-- Start Here -->
@@ -162,9 +164,8 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 <!-- End Here -->
 ```
 
-#### Step 6 - Add View to project ``WebContent\WEB-INF\jsp\hello.jsp`` file
 
-![](extra/output.JPG)
+#### Step 7 - Add View to project ``WebContent\WEB-INF\jsp\hello.jsp`` file
 
 ```JSP
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
@@ -185,7 +186,10 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 </html>
 ```
 
-#### Step 7 - Add Controller Class in ``src\com\rutvikpatel\springmvc3\helloworld\controller\HomeController.java`` folder
+![](extra/output.JPG)
+
+
+#### Step 8 - Add Controller Class in ``src\com\rutvikpatel\springmvc3\helloworld\controller\HomeController.java`` folder
 
 > Right Click on ``src`` folder > New > Class
 
@@ -219,6 +223,25 @@ public class HomeController {
 }
 ```
 
+
 #That's it... you are ready to run
 
 > Right Click on Project > Run As > Run on Server > Select Tomcat Server and click ``finish``
+
+
+## Note
+
+> In ``spring-web-servlet.xml`` file prefix ``XXX-servlet.xml`` should be same as "<servlet-name>" described in ``web.xml`` file
+
+```XML
+<servlet>
+	<servlet-name>spring-web</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>spring-web</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
+```
+spring-web
