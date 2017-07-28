@@ -155,6 +155,7 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 ```
 
 #### Step 6 - Add View to project ``WebContent\WEB-INF\jsp\hello.jsp`` file
+![](extra/output.JPG)
 ```JSP
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -173,4 +174,34 @@ Day 4 - Spring MVC 3.0 - Hello World Example
 </body>
 </html>
 ```
-![](extra/output.JPG)
+
+#### Step 7 - Add java controller class file in ``src\com\rutvikpatel\springmvc3\helloworld\controller\HomeController.java`` folder
+> Right Click on ``src`` folder > New > Class
+![](extra/step7.1.JPG)
+```JAVA
+package com.rutvikpatel.springmvc3.helloworld.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class HomeController {
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String printWelcome(ModelMap model) {
+		model.addAttribute("title", "Spring 3.0 MVC Hello World Example");
+		return "hello";
+	}
+	
+	@RequestMapping(value = "/hello/{name}", method = RequestMethod.GET)
+	public String hello(Model model,@PathVariable("name") String name) {
+		model.addAttribute("name", name);
+		model.addAttribute("title", "Spring 3.0 MVC Hello World Example");
+		return "hello";
+	}
+}
+```
